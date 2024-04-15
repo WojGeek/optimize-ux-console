@@ -8,7 +8,7 @@ enable_in_shell() {
         
         echo '# ' >> ~/$file
         echo '#  https://github.com/WojGeek/optimize-ux-console.git   '
-        echo 'source /opt/optimize-ux-console/main.sh'
+        echo 'source $HOME/optimize-ux-console/main.sh'
         echo ' '
         
     } >> ~/$file
@@ -20,4 +20,4 @@ enable_in_shell '.bash_profile'
 
 
 
-echo -e " - Enjoy the command console!!"
+echo -e " - Open a new console!!"
