@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #  Optimiza la UX en la consola de comandos. Shell sh/Bash
 #    14.4.2024, 23h31
@@ -10,12 +10,18 @@
 # En Produccion o Desarrollo
 IS_DEVELOPING=1
 
-MAIN_DIR=$PWD/scripts
+# ubicación de la aplicación clonada
+CLONED_GIT_REPOSITORY="$HOME/optimize-ux-console"       ##  DO NOT CHANGE
 
-source $MAIN_DIR/vars.sh
-source $MAIN_DIR/views.sh
-source $MAIN_DIR/functions.sh
-source $MAIN_DIR/alias.sh
+source $CLONED_GIT_REPOSITORY/env.sh
+
+# verify cloned URL before installing at /opt
+source $components/opt.sh
+check_first_install
+
+source $components/views.sh
+source $components/functions.sh
+source $components/alias.sh
 
 show_info
 enable_ux
