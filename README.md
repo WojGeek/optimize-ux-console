@@ -1,6 +1,6 @@
-# Agregar algunas funciones o atributo a la shell de Linux.
+# Agregar algunas funciones o atributos a la shell de Linux.
 
-    Espero optimizar mi propia experiencia de usuario en el uso diario de la consola de comandos.
+Espero **optimizar mi propia experiencia de usuario** en el uso diario de la consola de comandos.
 
 Features:
 
@@ -9,22 +9,22 @@ Features:
     - new ones coming soon
         
 
-## Descargar en el PC
+### Descargar en el PC
 
     TODO: git clone https://github.com/WilliansPatino/set-bash-env.git
 
-##  Instalación
+###  Instalación
 
     TODO: bash set-bash-env/install.sh
 
 
 
-## Modelo del prompt 
+### Modelo del prompt 
 
 
 ![MacVim+Solarized+Powerline+CtrlP](https://raw.github.com/b-ryan/powerline-shell/master/bash-powerline-screenshot.png)
 
-## Prestaciones del Powerline 
+### Prestaciones del Powerline 
 
 - Muestra algunos detalles importantes sobre la rama git/svn/hg/fossil (ver más abajo)
 - Cambia de color si el último comando salió con un código de error
@@ -33,7 +33,7 @@ Features:
 - Es fácil de personalizar y ampliar. Vea a continuación para más detalles.
 
 
-## Instalación manual del prompt
+### Instalación manual del prompt
 
 
 - Instalación usando pip:
@@ -51,7 +51,7 @@ python setup.py install
 ```
 
 
-## Cómo desabilitar este entorno
+### ¿Cómo desabilitar este?
 
 Comentar esta línea:
 
@@ -60,7 +60,7 @@ Comentar esta línea:
 
 ```
 
-##  Dónde buscar 
+##  ¿Cuáles archivo modifica la instalación de este?
 
 - .bashrc
 - .profile
