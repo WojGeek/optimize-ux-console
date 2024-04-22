@@ -11,11 +11,11 @@ enable_alias_apt() {
     • apkr - remove
     • apkq - info
     • apku - update "'
-    alias apki='sudo aptitude install "$@"'
-    alias apks='aptitude search "$@"'
-    alias apkr='sudo aptitude remove'
-    alias apkq='aptitude show "$@" '
-    alias apku='sudo aptitude update'
+    alias apki='sudo apt install -y "$@"'
+    alias apks='apt search "$@"'
+    alias apkr='sudo apt remove'
+    alias apkq='apt show "$@" '
+    alias apku='sudo apt update'
 }
 
 enable_alias_dnf() {
