@@ -22,10 +22,18 @@ check_first_install
 source $components/views.sh
 source $components/functions.sh
 source $components/alias.sh
+source $components/commands.sh
 
 show_info
-enable_ux
+#enable_ux
 enable_alias_pkg_mgmt
-#ChooseDistro
-enable_powerline_prompt
-check_NodeJS
+
+
+# prompt 
+# TODO: source $components/prompt.sh
+
+# TODO enable_powerline_prompt
+# TODO check_NodeJS
+
+#vim
+source $components/vim.sh
