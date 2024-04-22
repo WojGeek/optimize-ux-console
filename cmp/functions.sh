@@ -8,6 +8,8 @@ enable_ux() {
     # fi
 }
 
+
+
 detect_os() {
     
     MACHINETYPE="$(uname -m)";
@@ -21,17 +23,17 @@ detect_os() {
     export OS_FOUND
     
     if [[ $OSNAME =~ $DEB_TYPE ]]; then
-        os_result="deb"
+        OS_DERIVATES="deb"
     fi
     if [[ $OSNAME =~ $RPM_TYPE ]]; then
-        os_result="rpm"
+        OS_DERIVATES="rpm"
     fi
 }
 
 ChooseDistro() {
     detect_os
     echo -e " • $OS_FOUND"
-    case $os_result in
+    case $OS_DERIVATES in
         "rpm")
             
             if [ `rpm -q $1` ]; then
@@ -59,48 +61,6 @@ ChooseDistro() {
 
 
 
-set_prompt_and_environment() {
-    # Powerline prompt
-    detect_os
-    
-    active="false"
-    
-    case $os_result in
-        "rpm")
-            # echo -e "$msg $RPM_TYPE"
-            source /usr/share/powerline/bash/powerline.sh
-            active="true"
-        ;;
-        "deb")
-            # echo -e "$msg $DEB_TYPE"
-            
-            if [ -f  /usr/share/powerline/bindings/bash/powerline.sh ]; then
-                source /usr/share/powerline/bindings/bash/powerline.sh
-                active="true"
-            else
-                active="false"
-            fi
-        ;;
-        *)
-            echo -e "\nOperating system unknown or Maybe Detecting Fails"
-        ;;
-    esac
-    
-    if [  $active == "false" ]; then
-        echo -e " Inicio de Powerline prompt falló "
-    fi
-    
-}
-
-
-enable_powerline_prompt() {
-    powerline-daemon -q
-    POWERLINE_BASH_CONTINUATION=1
-    POWERLINE_BASH_SELECT=1
-    
-    set_prompt_and_environment
-    
-}
 
 # identificar OS
 check_NodeJS() {
