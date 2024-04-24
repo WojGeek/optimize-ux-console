@@ -1,6 +1,6 @@
 ## Repotenciar la consola de comandos
 
- Actualizo mis conocimientos de programación en Bash scripting e incorporo nuevas características en la  shell de Linux a fin de mejorar mi propia **experiencia de usuario** simplificando el trabajo en la consola de comandos.
+ Actualizo mis conocimientos de programación en Bash scripting desarrollando esta herramienta con la idea de ampliar con nuevas características  la  shell de Linux a fin de mejorar mi propia **experiencia de usuario** simplificando el trabajo en la consola de comandos.
 
 > Simply do more with fewer keystrokes. --W.
     
