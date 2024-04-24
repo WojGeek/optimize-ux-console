@@ -15,6 +15,7 @@ Características agregadas:
 
 ####  Instalación 
 
+    $ cd ~/
     $ git clone https://github.com/WojGeek/optimize-ux-console.git
 
 ####  Activación
