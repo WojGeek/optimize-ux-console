@@ -13,7 +13,7 @@ IS_DEVELOPING=1
 
 declare_app_environment() {
     # default location after  cloning
-    CLONEDAPP_DIR="$HOME/optimize-ux-console" 
+    CLONEDAPP_DIR="$HOME/optimize-ux-console"
     source $CLONEDAPP_DIR/app_env.sh
 }
 
@@ -22,21 +22,21 @@ require_helpers(){
 }
 
 announce_end_running() {
-    echo "==> For changes to take effect, close and re-open your current shell <=="
+    if [ ! $prompt_enable ] ; then
+        echo -e "\nPlease close and re-open your console, to watch effects.\n"
+    fi 
 }
 
 
-
-# prompt 
-# TODO: source $components/prompt.sh
-
-# TODO enable_powerline_prompt
 # TODO check_NodeJS
 
 main() {
+    echo -e "Simply do more with fewer keystrokes." 
     declare_app_environment
     require_helpers
-    show_info
+    #show_info
+    customize_shell_prompt
+    enable_alias_pkg_mgmt
     announce_end_running
 }
 
