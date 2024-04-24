@@ -42,7 +42,7 @@ Características agregadas:
 #### En caso de falla durante la instalación de Powerline
 
 > Instalación manual del prompt
->>  - Instalación usando pip:
+
 
 - Derivados de Red Hat/Fedora/OpenSuse:
 
