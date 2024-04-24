@@ -2,15 +2,15 @@
 
 Optimizar mi propia **experiencia de usuario** simplificando el trabajo en la consola de comandos.
 
-    > Simply do more with fewer keystrokes.
-    >>  W.
+    > Simply do more with fewer keystrokes. --W.
+    
 
 Características agregadas:
 
     - Atajos para gestión de paquetes
     - Personalizar el prompt del Bash basado en Powerline
     - Funciona para distro derivadas de Red Hat/OpenSuse/Fedora o Debian/Ubuntu
-    - 
+    - Espero identificar necesidades y agregar nuevas funciones...
         
 
 ####  Instalación 
@@ -75,7 +75,7 @@ Características agregadas:
 ```
 
 
-###### Desinstalación 
+#### Desinstalación 
 
 > Comentar esta línea en los archivos:
 - .bashrc
