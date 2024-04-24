@@ -29,7 +29,7 @@ Características agregadas:
 
 ![MacVim+Solarized+Powerline+CtrlP](https://raw.github.com/b-ryan/powerline-shell/master/bash-powerline-screenshot.png)
 
-(https://github.com/WojGeek/optimize-ux-console/blob/main/prompt.png)
+![MacVim+Solarized+Powerline+CtrlP](https://github.com/WojGeek/optimize-ux-console/blob/main/prompt.png)
 
 #### Prestaciones del Prompt con Powerline 
 
