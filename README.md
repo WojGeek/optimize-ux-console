@@ -1,9 +1,8 @@
 ## Repotenciar la consola de comandos
-- Agregar algunas funciones o atributos a la shell de Linux.
 
-Optimizar mi propia **experiencia de usuario** simplificando el trabajo en la consola de comandos.
+Funciones personalizadas en la  shell de Linux. Optimizar mi propia **experiencia de usuario** simplificando el trabajo en la consola de comandos.
 
-    > Simply do more with fewer keystrokes. --W.
+> Simply do more with fewer keystrokes. --W.
     
 
 Características agregadas:
