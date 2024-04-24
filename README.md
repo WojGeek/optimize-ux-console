@@ -7,10 +7,10 @@
 
 Características agregadas:
 
-    - Atajos para gestión de paquetes
-    - Personalizar el prompt del Bash basado en Powerline
-    - Funciona para distro derivadas de Red Hat/OpenSuse/Fedora o Debian/Ubuntu
-    - Espero identificar necesidades y agregar nuevas funciones...
+> - Atajos para gestión de paquetes
+> - Personalizar el prompt del Bash basado en Powerline
+> - Funciona para distro derivadas de Red Hat/OpenSuse/Fedora o Debian/Ubuntu
+> - Espero identificar necesidades y agregar nuevas funciones...
         
 
 ####  Instalación 
