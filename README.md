@@ -24,7 +24,7 @@ Características agregadas:
 
 
 
-#### Screenshot
+#### Screenshot del prompt
 
 
 ![MacVim+Solarized+Powerline+CtrlP](https://github.com/WojGeek/optimize-ux-console/blob/main/prompt.png)
