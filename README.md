@@ -27,8 +27,6 @@ Características agregadas:
 #### Screenshot
 
 
-![MacVim+Solarized+Powerline+CtrlP](https://raw.github.com/b-ryan/powerline-shell/master/bash-powerline-screenshot.png)
-
 ![MacVim+Solarized+Powerline+CtrlP](https://github.com/WojGeek/optimize-ux-console/blob/main/prompt.png)
 
 #### Prestaciones del Prompt con Powerline 
@@ -68,12 +66,15 @@ Características agregadas:
 
 #####  Instalar desde el repositorio Git de Buck Ryan:
 
+![MacVim+Solarized+Powerline+CtrlP](https://raw.github.com/b-ryan/powerline-shell/master/bash-powerline-screenshot.png)
+
 ```
    $ git clone https://github.com/b-ryan/powerline-shell
    $ cd powerline-shell
    $ python setup.py install
 
 ```
+
 
 
 #### Desinstalación 
