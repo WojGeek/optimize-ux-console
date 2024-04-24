@@ -19,7 +19,7 @@ Características agregadas:
 
 ####  Activación
 
-    $  bash set-bash-env/install.sh
+    $  bash ~/optimize-ux-console/installer.sh
 
 
 
