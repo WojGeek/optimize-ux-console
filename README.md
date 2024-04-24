@@ -1,71 +1,93 @@
 # Agregar algunas funciones o atributos a la shell de Linux.
 
-Espero **optimizar mi propia experiencia de usuario** en el uso diario de la consola de comandos.
+Optimizar mi propia **experiencia de usuario** simplificando el trabajo en la consola de comandos.
 
-Features:
+    > Simply do more with fewer keystrokes.
+    >>  W.
 
-    - Alias for Packages management 
-    - Powerline prompt
-    - new ones coming soon
+Características agregadas:
+
+    - Atajos para gestión de paquetes
+    - Personalizar el prompt del Bash basado en Powerline
+    - Funciona para distro derivadas de Red Hat/OpenSuse/Fedora o Debian/Ubuntu
+    - 
         
 
-### Descargar en el PC
+####  Instalación 
 
-    TODO: git clone https://github.com/WilliansPatino/set-bash-env.git
+    $ git clone https://github.com/WojGeek/optimize-ux-console.git
 
-###  Instalación
+####  Activación
 
-    TODO: bash set-bash-env/install.sh
+    $  bash set-bash-env/install.sh
 
 
 
-### Modelo del prompt 
+#### Screenshot
 
 
 ![MacVim+Solarized+Powerline+CtrlP](https://raw.github.com/b-ryan/powerline-shell/master/bash-powerline-screenshot.png)
 
-### Prestaciones del Powerline 
+(https://github.com/WojGeek/optimize-ux-console/blob/main/prompt.png)
 
-- Muestra algunos detalles importantes sobre la rama git/svn/hg/fossil (ver más abajo)
-- Cambia de color si el último comando salió con un código de error
-- Si está demasiado metido en un árbol de directorios, acorte la ruta mostrada con puntos suspensivos
-- Muestra el entorno [virtualenv](http://www.virtualenv.org/)  de Python actual. 
-- Es fácil de personalizar y ampliar. Vea a continuación para más detalles.
+#### Prestaciones del Prompt con Powerline 
+
+- Muestra algunos detalles importantes sobre la rama git.
+- Si surge algún código de error con un comando, cambia de color.
+- Acorte la ruta mostrada con puntos suspensivos, si está demasiado metido en un árbol de directorios.
+- Muestra el entorno de Python actual. 
+- Es fácil de personalizar y ampliar
 
 
-### Instalación manual del prompt
+#### En caso de falla durante la instalación de Powerline
 
+> Instalación manual del prompt
+>>  - Instalación usando pip:
 
-- Instalación usando pip:
-
-```
-pip install powerline-shell
-```
-
-- o desde el repositorio Git:
+- Derivados de Red Hat/Fedora/OpenSuse:
 
 ```
-git clone https://github.com/b-ryan/powerline-shell
-cd powerline-shell
-python setup.py install
-```
-
-
-### ¿Cómo desabilitar este?
-
-Comentar esta línea:
-
-```
-    TODO: source /home/wp/scripting-backup/main.sh
+     $ sudo dnf install -y powerline powerline-fonts
 
 ```
 
-##  ¿Cuáles archivo modifica la instalación de este?
+- Derivados de Debian/Ubuntu:
 
+```
+     $ sudo apt install -y  powerline fonts-powerline 
+     
+```
+
+- Instalación utilizando pip:
+
+```
+    $ pip install powerline-shell
+
+```
+
+#####  Instalar desde el repositorio Git de Buck Ryan:
+
+```
+   $ git clone https://github.com/b-ryan/powerline-shell
+   $ cd powerline-shell
+   $ python setup.py install
+
+```
+
+
+###### Desinstalación 
+
+> Comentar esta línea en los archivos:
 - .bashrc
 - .profile
 - .bash_profile
 
+```
+    
+    # source $HOME/optimize-ux-console/main.sh
+
+
+```
 
 
 
