@@ -6,7 +6,7 @@
 #
 
 check_clone_exist() {
-    if [ ! -d $CLONED_GIT_REPOSITORY ]; then
+    if [ ! -d $CLONEDAPP_DIR ]; then
         echo -e " • No fue encontrado 'optimize-ux-console' "
         Clone_using_the_webURL
         return 0
@@ -24,7 +24,7 @@ check_first_install() {
     # 1. comprobar que fue descargado los scripts
     check_clone_exist
     if [[ $? = 1 ]]; then
-        echo -e " • Cloned Web URL: "$CLONED_GIT_REPOSITORY
+        echo -e " • Cloned Web URL: "$CLONEDAPP_DIR
         
     else
         Clone_using_the_webURL

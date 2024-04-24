@@ -5,7 +5,7 @@
 enable_alias_apt() {
     
     # apt -  Debian/Ubuntu derivates
-    alias show-apt-alias='echo -e "Alias for apt:
+    alias show_apt_alias='echo -e "Alias for apt:
     • apki - install
     • apks - search
     • apkr - remove
@@ -21,7 +21,7 @@ enable_alias_apt() {
 enable_alias_dnf() {
     
     # dnf - RHEL Derivates, Fedora, AlmaLinux, Rocky Linux / RPM-based Linux distributions.
-    alias show-dnf-alias='echo -e "Alias for dnf/yum:
+    alias show_dnf_alias='echo -e "Alias for dnf/yum:
     • dnfi - install
     • dnfs - search
     • dnfr - remove
@@ -40,5 +40,6 @@ enable_alias_pkg_mgmt() {
     # Run all once
     enable_alias_dnf
     enable_alias_apt
-    echo -e " • Alias for Packages management Enabled: <show-dnf-alias>  <show-apt-alias> "
+    echo -e "\n--- Alias for packages management ---
+    - run: show_dnf_alias | show_apt_alias "
 }

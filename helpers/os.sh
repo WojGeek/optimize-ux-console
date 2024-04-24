@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -14,7 +14,6 @@ elif [ "$(uname -s)" = "Linux" ] && ( uname -m | grep -q -e '^arm' ); then
     target="arm-unknown-linux-gnueabihf"
 else
     echo "Unsupported OS or architecture"
-    exit 1
+    return
 fi
 echo "Detected target: $target"
-echo " • $xh_installdir/xh"
