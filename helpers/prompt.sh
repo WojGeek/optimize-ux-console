@@ -8,7 +8,7 @@
 set_prompt() {
     # Powerline prompt
 
-    prompt_enable="false"
+  
     #echo -e " - Enable Powerline Prompt here"
 
     detect_os
@@ -20,7 +20,7 @@ set_prompt() {
                 prompt_enable="false"
             fi
     elif [ "$OS_DERIVATES" == 'rpm' ] ; then
-            #TODO: 
+        
             echo "Pendiente  para rpm pkgages"
             source /usr/share/powerline/bash/powerline.sh
             prompt_enable="true"
@@ -29,26 +29,7 @@ set_prompt() {
          prompt_enable="false"
     fi
     
-    # case $os_result in
-    #     "rpm")
-    #         # echo -e "$msg $RPM_TYPE"
-    #         source /usr/share/powerline/bash/powerline.sh
-    #         prompt_enable="true"
-    #     ;;
-    #     "deb")
-    #         # echo -e "$msg $DEB_TYPE"
-            
-    #         if [ -f  "/usr/share/powerline/bindings/bash/powerline.sh" ]; then
-    #             source /usr/share/powerline/bindings/bash/powerline.sh
-    #             prompt_enable="true"
-    #         else
-    #             prompt_enable="false"
-    #         fi
-    #     ;;
-    #     *)
-    #         echo -e "\nOperating system not compatible with .rpm / .deb"
-    #     ;;
-    # esac
+ 
     
     if [  $prompt_enable == "false" ]; then
         echo -e "\tThere was no success enabling the prompt "
@@ -71,10 +52,6 @@ install_according_distro() {
             #install_package fonts-powerline # install powerline for Debian
         fi
 
-        # enable_powerline
-        # if [ $installed ] ; then
-        #  echo -e " *** INSTALLED **"
-        # fi
 }
 
 enable_powerline_prompt() {
@@ -88,17 +65,18 @@ enable_powerline_prompt() {
 }
 
 confirm_installation() {
+    echo -e "\n"
     PS3="Select the choice, please: "
 
     items=("Install the package" )
-    pkg="hello"
+    pkg=$1
 
     while true; do
         select item in "${items[@]}" "Continue"
         do
             case $REPLY in                                                                       
                 1)                                                                               
-                   echo -e "\t - Selected item #$REPLY which means $item $pkg"                           
+                   echo -e "\t - Selected item #$REPLY which means $item: $pkg"                           
                    return 1                                                                         
                    ;;                                                                            
                 $((${#items[@]}+1)))                                                             
@@ -117,20 +95,19 @@ confirm_installation() {
 
 prompt_main_startup () {
     
-    pkg_query powerline
+    pkg="powerline"
+
+    pkg_query $pkg
+
     if [  $? -eq 0 ] && [  "$pkg_found" == 0 ]; then
         
-        ##  Give user options 
-        confirm_installation
+        ##  Give user options to install the packages or not..
+        confirm_installation $pkg
         if [ $? -eq 1 ] ; then
             # Accepted
             
             install_according_distro
-            
-
-        # else 
-        # echo -e "** INSTALL POWERLINE if $installed = 1"
-        #     echo -e "** Continue: $?"
+     
         fi
         
     fi
@@ -138,7 +115,7 @@ prompt_main_startup () {
 
 
 customize_shell_prompt() {
-    echo -e " - Customize the bash shell"
+    echo -e " - Customize the shell prompt"
     prompt_main_startup
     if [ "$pkg_found" == 1 ] ; then
         enable_powerline_prompt
