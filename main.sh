@@ -34,8 +34,10 @@ main() {
     echo -e "Simply do more with fewer keystrokes." 
     declare_app_environment
     require_helpers
-    #show_info
-    customize_shell_prompt
+    # TODO:  revisar show_info
+    if  [ ! $prompt_enable ] ; then
+        customize_shell_prompt
+    fi
     enable_alias_pkg_mgmt
     announce_end_running
 }
