@@ -5,88 +5,107 @@
 #
 
 
-pkg_found=0
-
 install_package () {
-   
-   installed=0
-   local pkg=$@
-
-     if [ -z "$1" ]
-     then 
-       echo " - install_package: no hay argumentos"
-       return
+    
+    installed=0
+    local pkg=$@
+    
+    if [ -z "$1" ]
+    then
+        echo " - install_package: no hay argumentos"
+        return
     fi
-
+    
     detect_os
     if [ "$OS_DERIVATES" == 'deb' ]
     then
-
+        
         #echo -e "\t *** sudo apt install -y  $pkg "
         sudo apt install  $pkg 2>&1
         installed=1
-
+        
     elif [ "$OS_DERIVATES" == 'rpm' ]
     then
-        #echo "Instala con RPM"
-        echo " - sudo dnf install -y $pkg "
-        installed=1
+        
+        #echo " - sudo yum install -y $pkg "
+        sudo yum install -y $pkg
+        installed=0
+        
     else
         echo " - Haga una instalación manual de $1"
         installed=0
     fi
- 
+    
 }
 
-# run_comm() {
-#     #command_name=$1
-#     command_name -v "$1" >/dev/null 2>&1
-    
-#     #type $command_name &> /dev/null;
-
-#     if [ $? -eq 0 ]
-#     then
-#       echo "Type resulted: $?"
-#     fi
-# }
 
 pkg_query() {
-    # query is package already installed
+    # query is package is already installed
+    
+
+    local rpm_status="not installed"
+    local deb_status="TODO: averiguar y ajustar aqui"
+    local query="null"
+ 
 
     pkg=$1
 
-     if [ -z "$1" ]
-     then 
-       echo " - pkg_query: no hay argumentos"
-       return
+    if [ -z "$pkg" ]
+    # [  -z "$pkg" ] ||  
+    then
+        echo " - pkg_query: no arguments given for query"
+        return
     fi
-
+    
     detect_os
     if [ "$OS_DERIVATES" == 'deb' ] ; then
+        
         status="$(dpkg-query -W --showformat='${db:Status-Status}' "$pkg" 2>/dev/null)"
-        echo -e " - Query the dpkg database "
+
+        # Status for DEB packages not installed
+        in_case_not_found_pkg=$deb_status
         
-            
     elif [ "$OS_DERIVATES" == 'rpm' ] ; then
-            #TODO: 
         
-        echo "Pendiente  para rpm pkgages"
-
+        status="$(rpm -q  "$pkg" 2>/dev/null)"
+        
+        # Status for RPM packages not installed
+        in_case_not_found_pkg=$rpm_status
     else
-
-         echo " - Check platform and install package installer: $1"
-
+        
+        echo " - Allowed $allowed_packages only,  install $pkg manually, please"
+        
     fi
+    
    
-    # Found or not ...
-    if [ ! $? = 0 ] || [ ! "$status" = installed ]; then
-       pkg_found=0
-       echo -e "\tPackage: $pkg not found $?"
+
+    echo -e " - Query result: $status"
+    if [[  "$status" =~ $in_case_not_found_pkg  ]] ; then
+            # package status 
+
        
-    else 
-       pkg_found=1
-       echo -e "\t Package: $pkg found $?"
+            pkg_found=0
+            query="Failure"
+          
+
+        else
+
+            
+            pkg_found=1
+            query="Success"
+          
+
     fi
 
+ 
+ 
+            
+    echo -e "\t pkg_found: $pkg_found, pkg_type: $OS_DERIVATES, query: $query"
+    
+    # TODO: remover , status: $in_case_not_found_pkg    "
+    
+ 
+    unset $pkg
 
+    
 }
