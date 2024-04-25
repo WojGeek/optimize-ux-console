@@ -35,7 +35,7 @@ main() {
     declare_app_environment
     require_helpers
     # TODO:  revisar show_info
-    if  [ ! $prompt_enable ] ; then
+    if  [  $prompt_enable ] ; then
         customize_shell_prompt
     fi
     enable_alias_pkg_mgmt

@@ -21,7 +21,7 @@ set_prompt() {
             fi
     elif [ "$OS_DERIVATES" == 'rpm' ] ; then
         
-            echo "Pendiente  para rpm pkgages"
+            
             source /usr/share/powerline/bash/powerline.sh
             prompt_enable="true"
     else 
