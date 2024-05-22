@@ -79,7 +79,7 @@ pkg_query() {
     
    
 
-    echo -e " - Query result: $status"
+    echo -e " - pkg_query: $status"
     if [[  "$status" =~ $in_case_not_found_pkg  ]] ; then
             # package status 
 

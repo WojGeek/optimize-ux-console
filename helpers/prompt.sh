@@ -115,7 +115,7 @@ prompt_main_startup () {
 
 
 customize_shell_prompt() {
-    echo -e " - Customize the shell prompt"
+    #echo -e " - Customize the shell prompt"
     prompt_main_startup
     if [ "$pkg_found" == 1 ] ; then
         enable_powerline_prompt
